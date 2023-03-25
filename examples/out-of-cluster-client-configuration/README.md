@@ -14,9 +14,9 @@ Make sure your `kubectl` is configured and pointed to a cluster. Run
 `kubectl get nodes` to confirm.
 
 Run this application with:
-
-    cd out-of-cluster-client-configuration
-    go build -o app .
+pushd ~/src/client-go/examples/out-of-cluster-client-configuration
+scc.sh reports-aks-mobex.yaml reports-aks-mobex
+go build -o app .
     ./app
 
 Running this application will use the kubeconfig file and then authenticate to the
